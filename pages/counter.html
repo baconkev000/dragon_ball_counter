@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Counting Dragon Balls</title>
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/styles.css">
+        <script src="../js/counter.js"></script>
+    </head>
+    <body>
+        <nav id="navigation">
+            <a href="../index.html" id="nav-logo">
+                <img src="../images/dragon_ball_logo.png" />
+            </a>
+            <ul>
+                <a href="../index.html"><li>Home</li></a>
+                <a href="#"><li>Counter</li></a>
+                <a href="./gallery.html"><li>Gallery</li></a>
+            </ul>
+        </nav>
+        <div class="container">
+            <h1>Dragon Ball Counter:</h1>
+            <div id="counter-container">
+                <div id="history">
+                    <table id="counter-table">
+                        <tr>
+                            <th>Operator</th>
+                            <th>Dragon Balls</th>
+                            <th>Running Total</th>
+                        </tr>
+                    </table>
+                    <h2>
+                        Total: <span id="counterTotal">0</span>
+                    </h2>
+                </div>
+                <div>
+                    <img class="img-shadow" src="../images/piccolo.png" height="400px"/>
+                    <div class="reset-btn" onclick="resetHistory()">Reset</div>
+                </div>
+                <div id="counter-numbers-container">
+                    <div id="counter-numbers">
+                        <div onclick="countDragonBalls(1)"><p>1</p></div>
+                        <div onclick="countDragonBalls(10)"><p>10</p></div>
+                        <div onclick="countDragonBalls(100)"><p>100</p></div>
+                    </div>
+                    <div id="counter-operators">
+                        <span id="sub" onclick="toggleOperator()">-</span>
+                        <span id="add" class="operator-selected" onclick="toggleOperator()">+</span>
+                    </div>
+                    <p style="color:white">
+                        Select an operator and add or subtract dragon balls by clicking on a number.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
